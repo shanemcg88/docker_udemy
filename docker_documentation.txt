@@ -1,0 +1,12 @@
+IMAGE ID:
+2ad0e287c003e961265f2f31df2c51f63f05b227f26b184281dde6fd964ae8b6
+
+PATH:
+F:\webdev\tutorials\udemy\docker_udemy\frontend
+
+DOCKER RUN COMMAND WITH VOLUMES:
+
+docker run -it -p 3000:3000 -v /F:/webdev/tutorials/udemy/docker_udemy/frontend:/app -e CHOKIDAR_USEPOLLING=true <IMAGE ID>
+
+DOCKER RUN WITH GIT BASH:
+winpty docker run -it -p 3000:3000 -v /app/node_modules -v "/$(PWD)":/app -e CHOKIDAR_USEPOLLING=true <IMAGE ID>
